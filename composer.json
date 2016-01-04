@@ -1,0 +1,14 @@
+{
+    "name": "clthck/cakephp-jade",
+    "description": "Jade Template Engine Plugin for CakePHP 3",
+    "type": "plugin",
+    "require": {
+        "talesoft/tale-jade": "*"
+    },
+    "authors": [
+        {
+            "name": "clthck",
+            "email": "joey.corleone92@yahoo.com"
+        }
+    ]
+}
