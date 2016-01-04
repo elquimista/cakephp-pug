@@ -16,5 +16,5 @@ composer require clthck/cakephp-jade
 
 Add the following to your `config/bootstrap.php` to load the plugin.
 
-	Plugin::load('clthck/JadePHP', ['bootstrap' => true]);
+	Plugin::load('clthck/JadeView', ['bootstrap' => true]);
 
