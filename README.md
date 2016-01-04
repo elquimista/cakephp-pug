@@ -16,5 +16,24 @@ composer require clthck/cakephp-jade
 
 Add the following to your `config/bootstrap.php` to load the plugin.
 
-	Plugin::load('clthck/JadeView', ['bootstrap' => true]);
+```php
+Plugin::load('clthck/JadeView');
+```
 
+## Application Wide Usage
+
+Place the following to your `AppController.php` to load the JadeView class.
+```php
+public function initialize()
+{
+    parent::initialize();
+
+    $this->viewBuilder()
+        ->className('clthck/JadeView.Jade')
+        ->options(['pretty' => true]);
+}
+```
+
+## Language Syntax Reference
+
+Please check [jade.talesoft.io](http://jade.talesoft.io/) for syntax reference.
