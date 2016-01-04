@@ -1,8 +1,16 @@
 {
     "name": "clthck/cakephp-jade",
     "description": "Jade Template Engine Plugin for CakePHP 3",
-    "type": "plugin",
+    "type": "cakephp-plugin",
+    "keywords": [
+        "jade",
+        "view",
+        "cakephp",
+        "cakephp3"
+    ],
     "require": {
+        "php": ">=5.5.30",
+        "cakephp/cakephp": "~3.0",
         "talesoft/tale-jade": "*"
     },
     "authors": [
