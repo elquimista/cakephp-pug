@@ -62,6 +62,15 @@ class JadeView extends View
             $eventManager = EventManager::instance();
         }
 
+        parent::__construct($request, $response, $eventManager, $viewOptions);
+    }
+
+    /**
+     * Initialize method
+     *
+     */
+    public function initialize()
+    {
         $options = [
             'paths' => [
                 self::TEMPLATE_PATH
@@ -70,12 +79,9 @@ class JadeView extends View
                 'path' => CACHE . 'views'
             ],
         ];
-
-        $options = array_merge($options, $viewOptions);
+        $options = array_merge($options, $this->viewOptions());
 
         $this->renderer = new Jade\Renderer($options);
-
-        parent::__construct($request, $response, $eventManager, $viewOptions);
         $this->_ext = self::EXT;
     }
 
