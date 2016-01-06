@@ -97,6 +97,9 @@ class JadeView extends View
             $out = parent::_render($viewFile, $data);
         } else {
             $viewFile = str_replace(self::TEMPLATE_PATH, '', $viewFile);
+            $data = array_merge($data, [
+                'view' => $this,
+            ]);
             $out = $this->renderer->render($viewFile, $data);
         }
         

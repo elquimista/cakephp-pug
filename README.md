@@ -34,6 +34,13 @@ public function initialize()
 }
 ```
 
+## In Template File (.ctp.jade)
+
+Use `$view` instead of `$this`.
+```php
+= $view->Flash->render()
+```
+
 ## Language Syntax Reference
 
 Please check [jade.talesoft.io](http://jade.talesoft.io/) for syntax reference.
