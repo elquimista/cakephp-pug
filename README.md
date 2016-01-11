@@ -34,12 +34,48 @@ public function initialize()
 }
 ```
 
+What if we need to load additional helpers for our JadeView instance?
+In this case, we can make AppView class inherit JadeView class:
+```php
+...
+use clthck\JadeView\View\JadeView;
+...
+class AppView extends JadeView
+{
+	...
+	public function initialize()
+	{
+	    $this->viewOptions([
+	        'pretty' => true
+	    ]);
+
+	    parent::initialize();
+	    
+	    $this->loadHelper('Form', [
+	        'templates' => 'form_template'
+	    ]);
+	}
+}
+```
+
 ## In Template File (.ctp.jade)
 
 Use `$view` instead of `$this`.
 ```php
 = $view->Flash->render()
 ```
+
+## Usage Example of CakePHP javascript block
+
+	- $view->Html->scriptStart(['block' => true])
+	|
+		$(function() {
+			// Your js code goes here..
+		});
+
+	- $view->Html->scriptEnd()
+
+If you're using Sublime Text 2/3, you need to install [cakephp-jade-tmbundle](http://github.com/clthck/cakephp-jade-tmbundle/tree/master) to make syntax highlighting work properly.
 
 ## Language Syntax Reference
 
