@@ -78,10 +78,6 @@ class JadeView extends View
             'adapterOptions' => [
                 'path' => CACHE . 'views'
             ],
-            'lexerOptions' => [
-                'indentStyle' => ' ',
-                'indentWidth' => 2,
-            ]
         ];
         $options = array_merge($options, $this->viewOptions());
 
