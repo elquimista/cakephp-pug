@@ -1,3 +1,8 @@
+[![Build Status](https://travis-ci.org/clthck/cakephp-jade.svg)](https://travis-ci.org/clthck/cakephp-jade.svg)
+[![Latest Stable Version](https://poser.pugx.org/clthck/cakephp-jade/v/stable)](https://packagist.org/packages/clthck/cakephp-jade)
+[![Total Downloads](https://poser.pugx.org/clthck/cakephp-jade/downloads)](https://packagist.org/packages/clthck/cakephp-jade)
+[![License](https://poser.pugx.org/clthck/cakephp-jade/license)](https://packagist.org/packages/clthck/cakephp-jade)
+
 # Jade Template Engine Plugin for CakePHP 3
 
 Powered by [Tale Jade for PHP](https://github.com/Talesoft/tale-jade).
