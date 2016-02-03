@@ -10,7 +10,7 @@
         "cakephp3"
     ],
     "require": {
-        "php": ">=5.5.30",
+        "php": ">=5.5.21",
         "cakephp/cakephp": "~3.0",
         "talesoft/tale-jade": "*",
         "erusev/parsedown": "*"
