@@ -10,7 +10,7 @@
  * @since     0.0.1
  * @license   http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace clthck\JadeView\View;
+namespace JadeView\View;
 
 use Cake\Core\Configure;
 use Cake\Event\EventManager;

@@ -12,7 +12,7 @@
  * @since         1.2.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace clthck\JadeView\Test\TestCase\View;
+namespace JadeView\Test\TestCase\View;
 
 use Cake\Controller\Controller;
 use Cake\I18n\Time;
@@ -20,7 +20,7 @@ use Cake\Network\Request;
 use Cake\Network\Response;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
-use clthck\JadeView\View\JadeView;
+use JadeView\View\JadeView;
 
 /**
  * JadeViewTest

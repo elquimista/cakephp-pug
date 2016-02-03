@@ -23,7 +23,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "clthck\\JadeView\\": "src"
+            "JadeView\\": "src"
         }
     }
 }

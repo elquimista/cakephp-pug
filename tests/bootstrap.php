@@ -31,4 +31,4 @@ Configure::write('App', [
         'templates' => [dirname(__FILE__) . DS . 'test_app' . DS . 'src' . DS . 'Template' . DS],
     ]
 ]);
-Plugin::load('clthck/JadeView', ['path' => dirname(dirname(__FILE__)) . DS]);
+Plugin::load('JadeView', ['path' => dirname(dirname(__FILE__)) . DS]);

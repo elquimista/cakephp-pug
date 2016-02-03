@@ -17,7 +17,7 @@ composer require clthck/cakephp-jade
 Add the following to your `config/bootstrap.php` to load the plugin.
 
 ```php
-Plugin::load('clthck/JadeView');
+Plugin::load('JadeView');
 ```
 
 ## Application Wide Usage
@@ -29,7 +29,7 @@ public function initialize()
     parent::initialize();
 
     $this->viewBuilder()
-        ->className('clthck/JadeView.Jade')
+        ->className('JadeView.Jade')
         ->options(['pretty' => true]);
 }
 ```
@@ -38,7 +38,7 @@ What if we need to load additional helpers for our JadeView instance?
 In this case, we can make AppView class inherit JadeView class:
 ```php
 ...
-use clthck\JadeView\View\JadeView;
+use JadeView\View\JadeView;
 ...
 class AppView extends JadeView
 {
