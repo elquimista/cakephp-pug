@@ -1,0 +1,21 @@
+
+each $item, $key in $items
+    p Item at #{$key} is #{$item}!
+
+each $item in $items
+    p Item is #{$item}!
+
+$i = 0;
+while $i < 5
+    p Do something until $i is 5
+    - $i++
+
+$i = 0;
+do
+    p Do something with #{$i}
+    $i= $i + 1
+while $i < 4
+
+
+for $i = 0; $i < 3; $i++
+    p Do something with #{$i}

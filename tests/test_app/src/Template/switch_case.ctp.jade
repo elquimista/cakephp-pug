@@ -1,0 +1,11 @@
+
+case $someState
+    when 'state-1': p Expanded block
+    when 'state-2'
+        p Do some
+        p larger thing
+    when 'state-3'
+    when 'state-4'
+        p state-3 will fall through state-4 automatically
+    default
+        p Do the default thing

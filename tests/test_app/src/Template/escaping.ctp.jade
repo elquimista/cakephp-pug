@@ -1,0 +1,14 @@
+
+
+$maybeHtml= 'This is a string and <a href="#">this is <b>HTML</b></a>'
+
+p= $maybeHtml
+p!= $maybeHtml
+
+
+a(title=$maybeHtml)
+a(title!=$maybeHtml)
+
+
+p I am in a string #{$maybeHtml}
+p I am in a string !{$maybeHtml}

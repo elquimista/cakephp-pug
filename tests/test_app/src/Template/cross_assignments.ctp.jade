@@ -1,0 +1,11 @@
+//- Other than the official Node.js, this works with any attribute
+//- The official &attributes is not implemented fully right now
+
+a&classes('btn', 'btn-default')
+
+a&classes($classesFromScript)
+
+a&href('http://host', '/sub-url', '/file.html')
+
+$stylesArray= ['width' => '100%', 'background' => 'red']
+div&styles($stylesArray)

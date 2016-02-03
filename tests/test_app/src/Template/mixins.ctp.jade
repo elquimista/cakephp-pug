@@ -1,0 +1,7 @@
+mixin button(label, theme='default')
+    a.btn(class=$theme)= $label
+
++button('Default Button')
++button('Primary Button', 'primary')
++button('Info Button', 'info')
++button('Danger Button', 'danger')

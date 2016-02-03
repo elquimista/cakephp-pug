@@ -1,0 +1,13 @@
+include includes/some-jade-file
+
+include includes/some-php-file.php
+// will be compiled to <?php ?> correctly
+
+include includes/some-css-file.css
+// will be compiled to <style>..included content...</style>
+
+include includes/some-js-file.js
+// will be compiled to <script>...included content...</script>
+
+include includes/some-md-file.md
+// will be compiled from markdown

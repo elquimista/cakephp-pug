@@ -30,7 +30,7 @@ public function initialize()
 
     $this->viewBuilder()
         ->className('JadeView.Jade')
-        ->options(['pretty' => true]);
+        ->options(['pretty' => false]);
 }
 ```
 

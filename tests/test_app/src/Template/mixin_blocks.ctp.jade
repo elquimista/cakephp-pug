@@ -1,0 +1,14 @@
+
+mixin article(title= 'Untitled')
+    header.article-header= $title
+    article
+        if block
+            block
+        else
+            p No content for this article :(
+
++article('Article 1')
+    p The content of my first article
+
++article('Article 2')
+    p The content of my second article

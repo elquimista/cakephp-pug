@@ -1,0 +1,65 @@
+-
+	/**
+	 * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+	 * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+	 *
+	 * Licensed under The MIT License
+	 * For full copyright and license information, please see the LICENSE.txt
+	 * Redistributions of files must retain the above copyright notice.
+	 *
+	 * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+	 * @link          http://cakephp.org CakePHP(tm) Project
+	 * @since         0.10.0
+	 * @license       http://www.opensource.org/licenses/mit-license.php MIT License
+	 */
+
+	use Cake\Core\Configure;
+
+	$baseTitle = __('CakePHP: the rapid development php framework');
+
+doctype html
+
+<!--[if lt IE 7]>  <html class="lt-ie7"> <![endif]-->
+<!--[if IE 7]>     <html class="lt-ie8"> <![endif]-->
+<!--[if IE 8]>     <html class="lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html>
+<!--<![endif]-->
+
+<head>
+	!= $view->Html->charset()
+	!= $view->Html->meta(['http-equiv' => 'X-UA-Compatible', 'content' => 'IE=edge'])
+	!= $view->Html->meta("description", "")
+	!= $view->Html->meta("viewport", "width=device-width, initial-scale=1.0, maximum-scale=1")
+
+	block title
+		title #{$view->fetch('full_title', $baseTitle . ': ' . $view->fetch('title'))}
+
+	!= $view->Html->meta('icon')
+
+	block override_css
+		!= $view->Html->css('application', ['media' => 'screen, projection'])
+	block add_css
+
+	<!--[if lt IE 9]>
+		<script src="assets/components_premium/con-material-adui/dist/assets/html5shiv/html5shiv.min.js"></script>
+	<![endif]-->
+
+	!= $view->fetch('meta')
+	!= $view->fetch('add_css')
+</head>
+<body>
+	!= $view->fetch('content')
+	
+	footer
+		| &copy; 2016
+		strong #[a(href='http://github.com/coolops' target='_new') CoolOps]
+		| All rights reserved.
+
+	//- Scripts
+	block override_script
+		!= $view->Html->script('application')
+	block add_script
+	!= $view->fetch('add_script');
+</body>
+</html>
