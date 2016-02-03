@@ -12,6 +12,7 @@
  */
 namespace clthck\JadeView\View;
 
+use Cake\Core\Configure;
 use Cake\Event\EventManager;
 use Cake\Network\Request;
 use Cake\Network\Response;
@@ -31,7 +32,11 @@ class JadeView extends View
      * Constants
      */
     const EXT = '.ctp.jade';
-    const TEMPLATE_PATH = APP . 'Template';
+
+    /**
+     * Template folder path
+     */
+    protected $_templatePath = APP . 'Template';
 
     /**
      * Template file extension.
@@ -62,6 +67,8 @@ class JadeView extends View
             $eventManager = EventManager::instance();
         }
 
+        $this->_templatePath = Configure::read('App.paths.templates')[0];
+
         parent::__construct($request, $response, $eventManager, $viewOptions);
     }
 
@@ -73,7 +80,7 @@ class JadeView extends View
     {
         $options = [
             'paths' => [
-                self::TEMPLATE_PATH
+                $this->_templatePath
             ],
             'adapterOptions' => [
                 'path' => CACHE . 'views'
@@ -102,7 +109,7 @@ class JadeView extends View
         if (substr($viewFile, -3) === 'ctp') {
             $out = parent::_render($viewFile, $data);
         } else {
-            $viewFile = str_replace(self::TEMPLATE_PATH, '', $viewFile);
+            $viewFile = str_replace($this->_templatePath, '', $viewFile);
             $data = array_merge($data, [
                 'view' => $this,
             ]);
