@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/clthck/cakephp-jade.svg)](https://travis-ci.org/clthck/cakephp-jade.svg)
+[![Build Status](https://travis-ci.org/clthck/cakephp-jade.svg)](https://travis-ci.org/clthck/cakephp-jade)
 [![Latest Stable Version](https://poser.pugx.org/clthck/cakephp-jade/v/stable)](https://packagist.org/packages/clthck/cakephp-jade)
 [![Total Downloads](https://poser.pugx.org/clthck/cakephp-jade/downloads)](https://packagist.org/packages/clthck/cakephp-jade)
 [![License](https://poser.pugx.org/clthck/cakephp-jade/license)](https://packagist.org/packages/clthck/cakephp-jade)
