@@ -828,32 +828,33 @@ EXPECTED;
      *
      * @return void
      */
-//     public function testRenderVariadics()
-//     {
-//         $output = $this->view->render('variadics', false);
-//         
-//         $expected = <<<EXPECTED
-// <header class="article-header">
-//   Article 1</header>
-// <article>
-      
-// <p>
-//   The content of my first article
-// </p>
-//   </article>
+    public function testRenderVariadics()
+    {
+        $output = $this->view->render('variadics', false);
+        
+        $expected = <<<EXPECTED
+  <header>
+      </header>
+  <article>
+      </article>
 
+  <header>
+      </header>
+  <article>
+      </article>
 
-// <header class="article-header">
-//   Article 2</header>
-// <article>
-      
-// <p>
-//   The content of my second article
-// </p>
-//   </article>
-// EXPECTED;
-//         $this->assertSame(trim($expected), trim($output));
-//     }
+  <header>
+      </header>
+  <article>
+      </article>
+
+  <header>
+      </header>
+  <article>
+      </article>
+EXPECTED;
+        $this->assertSame(trim($expected), trim($output));
+    }
 
     /**
      * testRenderNamedMixinParameters method
