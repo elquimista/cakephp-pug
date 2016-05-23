@@ -36,7 +36,7 @@ class JadeView extends View
     /**
      * Template folder path
      */
-    protected $_templatePath = APP . 'Template';
+    protected $_templatePath;
 
     /**
      * Template file extension.
