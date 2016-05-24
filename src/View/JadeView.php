@@ -82,9 +82,7 @@ class JadeView extends View
             'paths' => [
                 $this->_templatePath
             ],
-            'adapterOptions' => [
-                'path' => CACHE . 'views'
-            ],
+            'cache_path' => CACHE . 'views',
             'pretty' => true,
         ];
         $options = array_merge($options, $this->viewOptions());
