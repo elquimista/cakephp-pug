@@ -1,20 +1,20 @@
-[![Build Status](https://travis-ci.org/clthck/cakephp-jade.svg)](https://travis-ci.org/clthck/cakephp-jade)
-[![Latest Stable Version](https://poser.pugx.org/clthck/cakephp-jade/v/stable)](https://packagist.org/packages/clthck/cakephp-jade)
-[![Total Downloads](https://poser.pugx.org/clthck/cakephp-jade/downloads)](https://packagist.org/packages/clthck/cakephp-jade)
-[![License](https://poser.pugx.org/clthck/cakephp-jade/license)](https://packagist.org/packages/clthck/cakephp-jade)
+[![Build Status](https://travis-ci.org/clthck/cakephp-pug.svg)](https://travis-ci.org/clthck/cakephp-pug)
+[![Latest Stable Version](https://poser.pugx.org/clthck/cakephp-pug/v/stable)](https://packagist.org/packages/clthck/cakephp-pug)
+[![Total Downloads](https://poser.pugx.org/clthck/cakephp-pug/downloads)](https://packagist.org/packages/clthck/cakephp-pug)
+[![License](https://poser.pugx.org/clthck/cakephp-pug/license)](https://packagist.org/packages/clthck/cakephp-pug)
 
-# Jade Template Engine Plugin for CakePHP 3
+# Pug Template Engine Plugin for CakePHP 3
 
 Powered by [Tale Jade for PHP](https://github.com/Talesoft/tale-jade).
 
 ## Installation
 
 1. Download [Composer](http://getcomposer.org/doc/00-intro.md) or update `composer self-update`.
-2. Run `php composer.phar require clthck/cakephp-jade`.
+2. Run `php composer.phar require clthck/cakephp-pug`.
 
 If Composer is installed globally, run
 ```bash
-composer require clthck/cakephp-jade
+composer require clthck/cakephp-pug
 ```
 
 ## Bootstrap
@@ -22,30 +22,30 @@ composer require clthck/cakephp-jade
 Add the following to your `config/bootstrap.php` to load the plugin.
 
 ```php
-Plugin::load('JadeView');
+Plugin::load('PugView');
 ```
 
 ## Application Wide Usage
 
-Place the following to your `AppController.php` to load the JadeView class.
+Place the following to your `AppController.php` to load the PugView class.
 ```php
 public function initialize()
 {
     parent::initialize();
 
     $this->viewBuilder()
-        ->className('JadeView.Jade')
+        ->className('PugView.Pug')
         ->options(['pretty' => false]);
 }
 ```
 
-What if we need to load additional helpers for our JadeView instance?
-In this case, we can make AppView class inherit JadeView class:
+What if we need to load additional helpers for our PugView instance?
+In this case, we can make AppView class inherit PugView class:
 ```php
 ...
-use JadeView\View\JadeView;
+use PugView\View\PugView;
 ...
-class AppView extends JadeView
+class AppView extends PugView
 {
 	...
 	public function initialize()
@@ -63,14 +63,14 @@ class AppView extends JadeView
 }
 ```
 
-## In Template File (.ctp.jade)
+## In Template File (.ctp.pug)
 
 Use `$view` instead of `$this`.
 ```php
 = $view->Flash->render()
 ```
 
-## Usage Example of CakePHP javascript block
+## Usage Example of CakePHP JavaScript block
 
 	- $view->Html->scriptStart(['block' => true])
 	|

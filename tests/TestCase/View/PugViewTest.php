@@ -12,7 +12,7 @@
  * @since         1.2.0
  * @license       http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace JadeView\Test\TestCase\View;
+namespace PugView\Test\TestCase\View;
 
 use Cake\Controller\Controller;
 use Cake\I18n\Time;
@@ -20,12 +20,12 @@ use Cake\Network\Request;
 use Cake\Network\Response;
 use Cake\ORM\TableRegistry;
 use Cake\TestSuite\TestCase;
-use JadeView\View\JadeView;
+use PugView\View\PugView;
 
 /**
- * JadeViewTest
+ * PugViewTest
  */
-class JadeViewTest extends TestCase
+class PugViewTest extends TestCase
 {
     // public $fixtures = ['core.Articles', 'core.Authors'];
 
@@ -34,7 +34,7 @@ class JadeViewTest extends TestCase
         Time::setToStringFormat('yyyy-MM-dd HH:mm:ss');
         $this->request = new Request();
         $this->response = new Response();
-        $this->view = new JadeView($this->request, $this->response);
+        $this->view = new PugView($this->request, $this->response);
     }
 
     /**
@@ -59,7 +59,7 @@ class JadeViewTest extends TestCase
 
         $expected = <<<EXPECTED
 <h1>
-  Welcome to Jade!
+  Welcome to Pug!
 </h1>
 <p>
   This shit is awesome, really.
@@ -754,8 +754,8 @@ EXPECTED;
 <p>
   I'm in a really long text, but I need a link!
   I can simply use 
-  <a href="jade-interpolation.html">
-    Jade Interpolation!
+  <a href="pug-interpolation.html">
+    Pug Interpolation!
   </a>
 </p>
 EXPECTED;

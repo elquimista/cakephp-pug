@@ -6,11 +6,11 @@
  * Redistributions of files must retain the above copyright notice.
  *
  * @copyright Copyright (c) clthck (http://github.com/clthck)
- * @link      http://github.com/clthck/cakephp-jade
+ * @link      http://github.com/clthck/cakephp-pug
  * @since     0.0.1
  * @license   http://www.opensource.org/licenses/mit-license.php MIT License
  */
-namespace JadeView\View;
+namespace PugView\View;
 
 use Cake\Core\Configure;
 use Cake\Event\EventManager;
@@ -20,18 +20,18 @@ use Cake\View\View;
 use Tale\Jade;
 
 /**
- * Jade View
+ * Pug View
  *
- * View class to preprocess Jade template language
+ * View class to preprocess Pug template language
  *
  */
-class JadeView extends View
+class PugView extends View
 {
 
     /**
      * Constants
      */
-    const EXT = '.ctp.jade';
+    const EXT = '.ctp.pug';
 
     /**
      * Template folder path
@@ -119,9 +119,9 @@ class JadeView extends View
     }
 
     /**
-     * Returns filename of given action's template file (.ctp.jade) as a string.
+     * Returns filename of given action's template file (.ctp.pug) as a string.
      * CamelCased action names will be under_scored by default.
-     * This means that you can have LongActionNames that refer to long_action_names.ctp.jade view.
+     * This means that you can have LongActionNames that refer to long_action_names.ctp.pug view.
      * You can change the inflection rule by overriding _inflectViewFileName.
      *
      * @param string|null $name

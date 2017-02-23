@@ -1,10 +1,10 @@
 {
-    "name": "clthck/cakephp-jade",
-    "description": "Jade Template Engine Plugin for CakePHP 3",
+    "name": "clthck/cakephp-pug",
+    "description": "Pug Template Engine Plugin for CakePHP 3",
     "type": "cakephp-plugin",
     "license": "MIT",
     "keywords": [
-        "jade",
+        "pug",
         "view",
         "cakephp",
         "cakephp3"
@@ -23,7 +23,7 @@
     ],
     "autoload": {
         "psr-4": {
-            "JadeView\\": "src"
+            "PugView\\": "src"
         }
     }
 }
