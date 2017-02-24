@@ -17,7 +17,7 @@ use Cake\Event\EventManager;
 use Cake\Network\Request;
 use Cake\Network\Response;
 use Cake\View\View;
-use Tale\Jade;
+use Tale\Pug;
 
 /**
  * Pug View
@@ -50,7 +50,7 @@ class PugView extends View
         '.ctp',
     ];
 
-    // Instance of Tale\Jade\Renderer
+    // Instance of Tale\Pug\Renderer
     protected $renderer;
 
     /**
@@ -87,7 +87,7 @@ class PugView extends View
         ];
         $options = array_merge($options, $this->viewOptions());
 
-        $this->renderer = new Jade\Renderer($options);
+        $this->renderer = new Pug\Renderer($options);
         $this->_ext = self::EXT;
     }
 
