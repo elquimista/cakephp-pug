@@ -84,4 +84,4 @@ If you're using Sublime Text 2/3, you need to install [cakephp-jade-tmbundle](ht
 
 ## Language Syntax Reference
 
-Please check [jade.talesoft.io](http://jade.talesoft.io/) for syntax reference.
+Please check [jade.talesoft.codes](http://jade.talesoft.codes/) for syntax reference.
