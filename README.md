@@ -5,7 +5,7 @@
 
 # Pug Template Engine Plugin for CakePHP 3
 
-Powered by [Tale Jade for PHP](https://github.com/Talesoft/tale-jade).
+Powered by [Tale Pug for PHP](https://github.com/Talesoft/tale-pug).
 
 ## Installation
 
